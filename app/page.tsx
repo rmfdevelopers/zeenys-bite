@@ -20,55 +20,104 @@ function SafeImage({ src, alt, fill, className, priority }: any) {
 export default function Page() {
   return (
     <main className="bg-black text-white min-h-screen">
-      <section id="hero" className="bg-black pt-40 pb-20 relative">
-        <div className="container mx-auto p-4 md:p-6 lg:p-8 flex flex-wrap justify-center">
-          <div className="w-full lg:w-1/2 xl:w-1/3 p-6 text-center">
-            <h1 className="text-6xl tracking-tighter leading-[0.9]">Enugu’s Most Flavorful Party Plates</h1>
-            <p className="text-lg">From smoky jollof to luxury small chops, we bring the vibe to your table.</p>
-            <button className="bg-accent text-black px-4 py-2 rounded">Order Now</button>
-          </div>
-          <div className="w-full lg:w-1/2 xl:w-2/3 p-6 text-center">
-            <SafeImage src="https://images.unsplash.com/photo-1665332195309-9d75071138f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY1NzJ8MHwxfHNlYXJjaHwxfHxzdGVhbWluZyUyMGhvdCUyME5pZ2VyaWFuJTIwam9sbG9mJTIwcmljZSUyMHBvdHxlbnwxfDB8fHwxNzgwNDA5MTUxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="steaming hot Nigerian jollof rice pot" fill={false} className="object-cover h-64 w-full" priority={true} />
-          </div>
-        </div>
-      </section>
-      <section id="features" className="bg-neutral-900 pt-20 pb-20">
-        <div className="container mx-auto p-4 md:p-6 lg:p-8 flex flex-wrap justify-center">
-          <h2 className="text-5xl tracking-tighter leading-[0.9] w-full text-center mb-4">Why Choose The Best Bite?</h2>
-          <div className="w-full lg:w-1/3 xl:w-1/3 p-6 text-center">
-            <Lucide.Flame className="text-3xl mb-2" />
-            <h3 className="text-2xl">The Smoky Standard</h3>
-            <p className="text-lg">Authentic firewood-style jollof aroma in every single bite.</p>
-          </div>
-          <div className="w-full lg:w-1/3 xl:w-1/3 p-6 text-center">
-            <Lucide.UtensilsCrossed className="text-3xl mb-2" />
-            <h3 className="text-2xl">Event Ready</h3>
-            <p className="text-lg">Scalable catering solutions for weddings, birthdays, and corporate gigs.</p>
-          </div>
-          <div className="w-full lg:w-1/3 xl:w-1/3 p-6 text-center">
-            <Lucide.Timer className="text-3xl mb-2" />
-            <h3 className="text-2xl">Prompt Delivery</h3>
-            <p className="text-lg">Fresh, hot food delivered straight to your venue across Enugu.</p>
+      {/* HERO */}
+      <section id="hero" className="pt-40 pb-20 bg-black">
+        <div className="container mx-auto p-4 flex flex-col items-center justify-center">
+          <h1 className="text-6xl tracking-tighter leading-[0.9] font-heading mb-4">The Best Bite In Every Grain.</h1>
+          <p className="text-lg text-center mb-8">Exquisite event catering for the discerning palate. Bringing the soul of Enugu’s finest grills and smoky jollof to your table.</p>
+          <a href="#contact" className="bg-accent text-black py-2 px-4 rounded">Book Your Event</a>
+          <div className="mt-12">
+            <SafeImage src="https://images.unsplash.com/photo-1665332195309-9d75071138f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY1NzJ8MHwxfHNlYXJjaHwxfHxMdXh1cnklMjBOaWdlcmlhbiUyMGV2ZW50JTIwY2F0ZXJpbmclMjBzbW9reSUyMGpvbGxvZiUyMHJpY2UlMjBwbGF0dGVyJTIwdGFibGUlMjBzZXR0aW5nfGVufDF8MHx8fDE3ODA0MDk3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luxury Nigerian event catering smoky jollof rice platter table setting" fill className="object-cover h-80 w-full" priority />
           </div>
         </div>
       </section>
-      <section id="products" className="bg-black pt-20 pb-20">
-        <div className="container mx-auto p-4 md:p-6 lg:p-8 flex flex-wrap justify-center">
-          <h2 className="text-5xl tracking-tighter leading-[0.9] w-full text-center mb-4">Our Menu Highlights</h2>
-          <div className="w-full lg:w-1/3 xl:w-1/3 p-6 text-center">
-            <h3 className="text-2xl">Smoky Jollof Feast</h3>
-            <p className="text-lg">Our signature party jollof served with fried plantain and peppered protein.</p>
-            <p className="text-lg">₦12,500</p>
+
+      {/* FEATURES */}
+      <section id="features" className="pt-40 pb-20 bg-gradient-to-b from-black to-neutral-900">
+        <div className="container mx-auto p-4 flex flex-col items-center justify-center">
+          <h2 className="text-5xl tracking-tighter leading-[0.9] font-heading mb-4">The Zeeny Excellence</h2>
+          <p className="text-lg text-center mb-8">Why we are Enugu's first choice for premium catering.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <Lucide.Flame className="text-accent" size={24} />
+              <h3 className="text-lg font-heading mt-2">Authentic Smoky Flavor</h3>
+              <p className="text-sm">We maintain the traditional firewood technique for that unmistakable party jollof taste.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <Lucide.Package className="text-accent" size={24} />
+              <h3 className="text-lg font-heading mt-2">Premium Packaging</h3>
+              <p className="text-sm">Luxury presentation that elevates your event aesthetic from the first glance.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <Lucide.CalendarCheck className="text-accent" size={24} />
+              <h3 className="text-lg font-heading mt-2">Event Ready</h3>
+              <p className="text-sm">Scaled to handle everything from intimate dinners to grand wedding receptions.</p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 xl:w-1/3 p-6 text-center">
-            <h3 className="text-2xl">Luxury Small Chops</h3>
-            <p className="text-lg">A mix of puff puff, samosas, spring rolls, and spicy gizzard.</p>
-            <p className="text-lg">₦8,000</p>
+        </div>
+      </section>
+
+      {/* PRODUCTS */}
+      <section id="products" className="pt-40 pb-20 bg-neutral-900">
+        <div className="container mx-auto p-4 flex flex-col items-center justify-center">
+          <h2 className="text-5xl tracking-tighter leading-[0.9] font-heading mb-4">Our Signature Menus</h2>
+          <p className="text-lg text-center mb-8">Curated dishes for unforgettable celebrations.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">Smoky Jollof Party Tray</h3>
+              <p className="text-sm">Our signature firewood-flavored rice served with choice of protein and sides.</p>
+              <p className="text-sm">₦35,000</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">Jollof Cup Deluxe</h3>
+              <p className="text-sm">Perfectly portioned luxury cups for corporate events and intimate gatherings.</p>
+              <p className="text-sm">₦4,500</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">Gourmet Small Chops Box</h3>
+              <p className="text-sm">An exquisite selection of puff puff, samosas, spring rolls, and peppered gizzard.</p>
+              <p className="text-sm">₦15,000</p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 xl:w-1/3 p-6 text-center">
-            <h3 className="text-2xl">Signature Jollof Cup</h3>
-            <p className="text-lg">The perfect grab-and-go cup featuring rice, moin-moin, and turkey.</p>
-            <p className="text-lg">₦4,500</p>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="pt-40 pb-20 bg-black">
+        <div className="container mx-auto p-4 flex flex-col items-center justify-center">
+          <h2 className="text-5xl tracking-tighter leading-[0.9] font-heading mb-4">Enugu's Gourmet Kitchen</h2>
+          <p className="text-lg text-center mb-8">Zeeny’s Bite started with a simple mission: to refine the Nigerian catering experience. From our kitchen in the heart of Enugu, we blend traditional techniques with luxury presentation to ensure your guests enjoy the best bite, every time.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">500+</h3>
+              <p className="text-sm">Events Catered</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">100%</h3>
+              <p className="text-sm">Smoky Guarantee</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">10k+</h3>
+              <p className="text-sm">Bites Served</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="pt-40 pb-20 bg-black">
+        <div className="container mx-auto p-4 flex flex-col items-center justify-center">
+          <h2 className="text-5xl tracking-tighter leading-[0.9] font-heading mb-4">Reserve Your Date</h2>
+          <p className="text-lg text-center mb-8">Get in touch with us to book your event.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">Address</h3>
+              <p className="text-sm">16 Ideani Mount Abani road, Enugu, Nigeria</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4">
+              <h3 className="text-lg font-heading mt-2">Social Media</h3>
+              <p className="text-sm">Instagram: @zeenysbitefood.ng</p>
+            </div>
           </div>
         </div>
       </section>
