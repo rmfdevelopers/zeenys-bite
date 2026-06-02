@@ -1,17 +1,8 @@
 import type { Config } from "tailwindcss";
 export default {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#A04000",
-        secondary: "#F5F5DC",
-        accent: "#D35400"
-      },
-      fontFamily: {
-        heading: ["Oswald"],
-        sans: ["Sora"]
-      }
-    }
-  }
+  theme: { extend: {
+    colors: { primary: "#9A3412", secondary: "#FEF3C7", accent: "#EA580C" },
+    fontFamily: { heading: ["Oswald"], sans: ["Sora"] }
+  }}
 } satisfies Config;
