@@ -1,17 +1,20 @@
 import type { Config } from "tailwindcss";
-export default {
+
+const config: Config = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
-  theme: { 
+  theme: {
     extend: {
-      colors: { 
-        primary: "#111111", 
-        secondary: "#FDFBF7", 
-        accent: "#D4AF37" 
+      colors: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)"
       },
-      fontFamily: { 
-        heading: ["Playfair Display"], 
-        sans: ["Outfit"] 
+      fontFamily: {
+        heading: ["var(--font-heading)"],
+        sans: ["var(--font-body)"]
       }
     }
-  }
-} satisfies Config;
+  },
+  plugins: []
+};
+export default config;
